@@ -1,0 +1,23 @@
+import React, { useState, useEffect } from 'react';
+
+function Time() {
+  const [time, setTime] = useState(Date.now());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTime(Date.now());
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
+  return (
+    <div>
+      <p>{time}</p>
+    </div>
+  );
+}
+
+export default Time;
