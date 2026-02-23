@@ -1,38 +1,128 @@
-.App {
+/* ============================
+   GLOBAL STYLES
+============================ */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+}
+
+/* Page wrapper */
+.page-container {
+  padding: 25px;
+  max-width: 900px;
+  margin: auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #333;
+  font-weight: 600;
+}
+
+/* ============================
+   NAVBAR 
+============================ */
+nav {
+  background: #1a73e8;
+  padding: 14px 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ============================
+   LOGIN PAGE
+============================ */
+.login-container {
+  width: 370px;
+  margin: 80px auto;
+  padding: 35px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-container h2 {
+  margin-bottom: 22px;
+  font-size: 24px;
+  color: #222;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Input box */
+.login-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  font-size: 15px;
+  background: #fafafa;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Login Button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #4c8bf5;
   color: white;
+  border-radius: 8px;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: 600;
 }
 
-.App-link {
-  color: #61dafb;
+.login-btn:hover {
+  background: #3a72d3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* ============================
+   LOGOUT BUTTON (optional)
+============================ */
+.logout-btn {
+  margin-left: auto;
+  padding: 8px 14px;
+  background: #ff5252;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #e04343;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .login-container {
+    width: 90%;
+    margin-top: 60px;
   }
 }
